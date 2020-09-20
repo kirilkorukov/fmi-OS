@@ -49,6 +49,8 @@ int main(int argc, char* argv[])
 		errno = olderrno;
 		err(6, "error writing");
 	}
+	close(fd1);
+	close(fd2);
 	free(buf);
 
 	exit(1);
